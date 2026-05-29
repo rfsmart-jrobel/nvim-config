@@ -4,7 +4,7 @@ return {
 	opts = {},
 	config = function()
 		require("marks").setup({
-			builtin_marks = { ".", "<", ">", "^" },
+			builtin_marks = { "." },
 		})
 	end,
 }

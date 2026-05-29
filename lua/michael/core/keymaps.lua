@@ -23,9 +23,11 @@ vim.keymap.set("n", "<C-j>", "<Cmd>BufferLineCycleNext<CR>", { desc = "Next Buff
 vim.keymap.set("n", "<C-k>", "<Cmd>BufferLineCyclePrev<CR>", { desc = "Prev Buffer" })
 
 vim.keymap.set("n", "<leader>gr", "<Cmd>DiffviewOpen HEAD<CR>", { desc = "Git Review (w/ HEAD)" })
-vim.keymap.set("n", "<leader>gR", "<Cmd>DiffviewOpen master<CR>", { desc = "Git Review (w/ master)" })
-vim.keymap.set("n", "<leader>gu", "<Cmd>DiffviewOpen<CR>", { desc = "Git Unstaged review" })
-vim.keymap.set("n", "<leader>gu", ":DiffviewOpen ", { desc = "Git review (w/ Hash)" })
+vim.keymap.set("n", "<leader>gR", function()
+	vim.cmd("DiffviewOpen " .. vim.fn.system("git merge-base master HEAD"))
+end, { desc = "Git Review (w/ master)" })
+vim.keymap.set("n", "<leader>gu", "<Cmd>DiffviewOpen<CR>", { desc = "Git Untracked review" })
+vim.keymap.set("n", "<leader>gh", ":DiffviewOpen ", { desc = "Git review (w/ Hash)" })
 vim.keymap.set("n", "<leader>gc", "<Cmd>DiffviewClose<CR>", { desc = "Git Close review" })
 
 vim.keymap.set("n", "<leader>s", "<Cmd>w<CR>", { desc = "Save Buffer" })
