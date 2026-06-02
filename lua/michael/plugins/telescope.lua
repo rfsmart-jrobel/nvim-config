@@ -56,6 +56,7 @@ return {
 					show_scores = false,
 					show_unindexed = true, -- Shows files not yet in the database
 					db_root = vim.fn.stdpath("data"), -- Explicitly set database location
+					db_safe_mode = false,
 					workspaces = {
 						--  utilize with syntax: ":code:"
 						--  alternatively, ":<tab>" to open list
