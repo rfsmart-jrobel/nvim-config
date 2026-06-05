@@ -30,5 +30,11 @@ vim.keymap.set("n", "<leader>gu", "<Cmd>DiffviewOpen<CR>", { desc = "Git Untrack
 vim.keymap.set("n", "<leader>gh", ":DiffviewOpen ", { desc = "Git review (w/ Hash)" })
 vim.keymap.set("n", "<leader>gc", "<Cmd>DiffviewClose<CR>", { desc = "Git Close review" })
 
-vim.keymap.set("n", "<leader>s", "<Cmd>w<CR>", { desc = "Save Buffer" })
-vim.keymap.set("n", "<leader>S", "<Cmd>wall<CR>", { desc = "Save All Buffers" })
+vim.keymap.set("n", "<leader>s", "<Cmd>w<CR>", { desc = "Save buffer" })
+vim.keymap.set("n", "<leader>S", "<Cmd>wall<CR>", { desc = "Save all buffers" })
+
+vim.keymap.set("n", "<leader>by", function()
+	local path = vim.fn.expand("%")
+	vim.fn.setreg("+", path)
+	print("Yanked " .. path)
+end, { desc = "Buffer Yank path" })

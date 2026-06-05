@@ -61,7 +61,7 @@ return {
 			function()
 				Snacks.bufdelete.other()
 			end,
-			desc = "Buffer Delete (All)",
+			desc = "Buffer Delete (inverse)",
 		},
 	},
 }
