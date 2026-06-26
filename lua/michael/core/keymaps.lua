@@ -21,6 +21,8 @@ end, { desc = "Fix diff view alignment" })
 
 vim.keymap.set("n", "<C-j>", "<Cmd>BufferLineCycleNext<CR>", { desc = "Next Buffer" })
 vim.keymap.set("n", "<C-k>", "<Cmd>BufferLineCyclePrev<CR>", { desc = "Prev Buffer" })
+vim.keymap.set("n", "<C-S-J>", "<Cmd>BufferLineMoveNext<CR>", { desc = "Move active buffer right in bar" })
+vim.keymap.set("n", "<C-S-K>", "<Cmd>BufferLineMovePrev<CR>", { desc = "Move active buffer left in bar" })
 
 vim.keymap.set("n", "<leader>gr", "<Cmd>DiffviewOpen HEAD<CR>", { desc = "Git Review (w/ HEAD)" })
 vim.keymap.set("n", "<leader>gR", function()
