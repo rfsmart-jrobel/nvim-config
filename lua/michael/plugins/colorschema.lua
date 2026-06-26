@@ -14,7 +14,7 @@ return {
 			-- local border = "#547998"
 
 			require("tokyonight").setup({
-				style = "night",
+				style = "storm",
 				on_colors = function(colors)
 					-- colors.bg = bg
 					-- colors.bg_dark = bg_dark

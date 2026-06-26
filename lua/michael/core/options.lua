@@ -1,7 +1,7 @@
 -- vim.cmd("let g:netrw_liststyle = 3")
 
 vim.opt.number = true -- show numbers in gutter
-vim.opt.relativenumber = true -- show numbers relative to current line
+-- vim.opt.relativenumber = true -- show numbers relative to current line
 
 vim.opt.cursorline = true -- highlight current line number (and enable the below 2 options to only highlight number)
 vim.opt.cursorlineopt = "number"
@@ -30,6 +30,9 @@ vim.opt.wrap = false
 -- search settings
 vim.opt.ignorecase = true -- ignore case when searching
 vim.opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
+-- force case sensitive for * and # searches of word underneath cursor
+vim.keymap.set("n", "*", [[/\<<C-r>=expand('<cword>')<CR>\>\C<CR>]], { silent = true })
+vim.keymap.set("n", "#", [[?\<<C-r>=expand('<cword>')<CR>\>\C<CR>]], { silent = true })
 
 -- turn on termguicolors for tokyonight colorscheme to work
 -- need to have a true color terminal
@@ -47,7 +50,7 @@ vim.opt.clipboard:append("unnamedplus") -- use system register as default regist
 vim.opt.splitright = true -- split vertical window to the right
 vim.opt.splitbelow = true -- split horizontal window to the bottom
 
--- stop auto inclusion of new line at the end of files
+-- stop auto inclusion of new line at the end of iles
 vim.opt.fixendofline = false
 
 -- force CRLF line endings for all new files
