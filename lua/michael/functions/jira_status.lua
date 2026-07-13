@@ -25,7 +25,7 @@ function M.update_jira_status()
 		"--header",
 		"Content-Type: application/json",
 		"--data",
-		'{"jql": "' .. jql_filters .. '", "maxResults": 5, "fields": ["key"]}',
+		'{"jql": "' .. jql_filters .. '", "maxResults": 5, "fields": ["key","status"]}',
 	}, {
 		stdout_buffered = true,
 		on_stdout = function(_, data)
