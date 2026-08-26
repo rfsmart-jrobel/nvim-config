@@ -21,7 +21,7 @@ return {
 		vim.keymap.set("n", "<leader>t4", "<cmd>4ToggleTerm<CR>", { desc = "Terminal Floating (toggle)" })
 		vim.keymap.set("n", "<leader>t5", "<cmd>5ToggleTerm<CR>", { desc = "Terminal Floating (toggle)" })
 		vim.keymap.set("n", "<leader>ts", function()
-			vim.cmd("9ToggleTerm direction=vertical size=60")
+			vim.cmd("9ToggleTerm direction=vertical size=90")
 		end, { desc = "Terminal Sidebar (toggle)" })
 	end,
 }
