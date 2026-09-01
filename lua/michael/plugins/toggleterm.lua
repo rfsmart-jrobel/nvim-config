@@ -15,11 +15,18 @@ return {
 		vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], { noremap = true, silent = true })
 
 		vim.keymap.set("n", "<leader>tt", "<cmd>ToggleTerm<CR>", { desc = "Terminal Toggle" })
+		vim.keymap.set(
+			"n",
+			"<leader>tc",
+			"<cmd>99ToggleTerm<CR><cmd>1ToggleTerm<CR><cmd>1ToggleTerm<CR>",
+			{ desc = "Terminal Close" }
+		)
 		vim.keymap.set("n", "<leader>tf", "<cmd>1ToggleTerm<CR>", { desc = "Terminal Floating (toggle)" })
 		vim.keymap.set("n", "<leader>t2", "<cmd>2ToggleTerm<CR>", { desc = "Terminal Floating (toggle)" })
 		vim.keymap.set("n", "<leader>t3", "<cmd>3ToggleTerm<CR>", { desc = "Terminal Floating (toggle)" })
 		vim.keymap.set("n", "<leader>t4", "<cmd>4ToggleTerm<CR>", { desc = "Terminal Floating (toggle)" })
 		vim.keymap.set("n", "<leader>t5", "<cmd>5ToggleTerm<CR>", { desc = "Terminal Floating (toggle)" })
+		vim.keymap.set("n", "<leader>td", "<cmd>6ToggleTerm<CR>", { desc = "Terminal Deploy (toggle)" })
 		vim.keymap.set("n", "<leader>ts", function()
 			vim.cmd("9ToggleTerm direction=vertical size=90")
 		end, { desc = "Terminal Sidebar (toggle)" })
