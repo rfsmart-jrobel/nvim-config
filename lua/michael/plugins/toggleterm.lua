@@ -14,12 +14,11 @@ return {
 		-- Make <Esc> leave terminal mode
 		vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]], { noremap = true, silent = true })
 
-		vim.keymap.set("n", "<leader>tt", "<cmd>ToggleTerm<CR>", { desc = "Terminal Toggle" })
 		vim.keymap.set(
 			"n",
-			"<leader>tc",
+			"<leader>tt",
 			"<cmd>99ToggleTerm<CR><cmd>1ToggleTerm<CR><cmd>1ToggleTerm<CR>",
-			{ desc = "Terminal Close" }
+			{ desc = "Terminal Toggle (close floating)" }
 		)
 		vim.keymap.set("n", "<leader>tf", "<cmd>1ToggleTerm<CR>", { desc = "Terminal Floating (toggle)" })
 		vim.keymap.set("n", "<leader>t2", "<cmd>2ToggleTerm<CR>", { desc = "Terminal Floating (toggle)" })
