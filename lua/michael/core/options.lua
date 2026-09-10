@@ -9,6 +9,9 @@ vim.api.nvim_set_hl(0, "CursorLineNr", { fg = "#ff9e64", bold = true })
 
 vim.opt.startofline = true -- gg defaults to column 1 (among other things)
 
+vim.keymap.set("n", "n", "nzz", { silent = true }) -- Find stays in center of screen
+vim.keymap.set("n", "N", "Nzz", { silent = true })
+
 -- vim.opt.hlsearch = false -- controls search results highlighting
 
 -- prevent keymapping timeout
