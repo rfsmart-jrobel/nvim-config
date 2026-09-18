@@ -34,8 +34,8 @@ vim.opt.wrap = false
 vim.opt.ignorecase = true -- ignore case when searching
 vim.opt.smartcase = true -- if you include mixed case in your search, assumes you want case-sensitive
 -- force case sensitive for * and # searches of word underneath cursor
-vim.keymap.set("n", "*", [[/\<<C-r>=expand('<cword>')<CR>\>\C<CR>]], { silent = true })
-vim.keymap.set("n", "#", [[?\<<C-r>=expand('<cword>')<CR>\>\C<CR>]], { silent = true })
+vim.keymap.set("n", "*", [[/\<<C-r>=expand('<cword>')<CR>\>\C<CR>zz]], { silent = true })
+vim.keymap.set("n", "#", [[?\<<C-r>=expand('<cword>')<CR>\>\C<CR>zz]], { silent = true })
 
 -- turn on termguicolors for tokyonight colorscheme to work
 -- need to have a true color terminal
