@@ -19,9 +19,9 @@ return {
 			-- Default mappings
 			api.config.mappings.default_on_attach(bufnr)
 
-			vim.schedule(function()
+			vim.defer_fn(function()
 				vim.opt_local.wrap = true
-			end)
+			end, 250)
 
 			-- Override TAB to open the file WITHOUT switching focus to the editor
 			-- 'edit' normally switches focus, so we jump back immediately

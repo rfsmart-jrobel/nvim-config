@@ -9,6 +9,7 @@ return {
 			separator_style = "slant",
 			max_name_length = 30,
 			min_name_length = 5,
+			right_mouse_command = false,
 		},
 	},
 }

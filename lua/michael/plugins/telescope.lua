@@ -76,11 +76,7 @@ return {
 		local keymap = vim.keymap -- for conciseness
 
 		keymap.set("n", "<C-p>", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })
-		vim.keymap.set("n", "<leader>ff", function()
-			telescope.extensions.frecency.frecency({
-				workspace = "CWD",
-			})
-		end, { desc = "Find File (by name)" })
+		vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Find File (by name)" })
 		keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
 		-- keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Find grep string in cwd" })
 		-- run "Man rg" to see params to pass to live_grep
