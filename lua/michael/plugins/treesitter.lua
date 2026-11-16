@@ -1,16 +1,14 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
+	branch = "main",
 	event = { "BufReadPre", "BufNewFile" }, -- only need treesitter when opening a new or existing buffer
 	build = ":TSUpdate", -- updates all language parsers update when this plugin is updated
 	dependencies = {
 		"windwp/nvim-ts-autotag", -- provides auto-closing functionality for tags
 	},
 	config = function()
-		-- import nvim-treesitter plugin
-		local treesitter = require("nvim-treesitter.configs")
-
 		-- configure treesitter
-		treesitter.setup({ -- enable syntax highlighting
+		require("nvim-treesitter").setup({ -- enable syntax highlighting
 			modules = {},
 			sync_install = false,
 			ignore_install = {},

@@ -162,7 +162,7 @@ return {
 				vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts) -- jump to next diagnostic in buffer
 
 				opts.desc = "LSP: Restart LSP"
-				vim.keymap.set("n", "<leader>lr", ":LspRestart<CR>", opts) -- mapping to restart lsp if necessary
+				vim.keymap.set("n", "<leader>lr", ":lsp restart<CR>", opts) -- mapping to restart lsp if necessary
 
 				-- client.server_capabilities.semanticTokensProvider = nil -- prevent LSP highlighting
 
